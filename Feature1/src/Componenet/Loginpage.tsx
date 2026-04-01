@@ -34,7 +34,7 @@ const handleSubmit = async (e: any) => {
 
     if (response.ok) {
       alert("login successful");
-    navigate("/");
+    navigate("/home");
     } else {
       alert(data.message || "login failed");
     }
