@@ -8,7 +8,7 @@ const app = express();
 const port = 3000;
 const connectDB = async () => {
   try {
-    await mongoose.connect("mongodb://127.0.0.1:27017/userdb");
+    await mongoose.connect(process.env.Mongodb_URL);
     console.log("MongoDB Connected");
   } catch (error) {
     console.error("DB connection error:", error);
