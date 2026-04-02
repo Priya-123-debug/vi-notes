@@ -18,7 +18,10 @@ const connectDB = async () => {
 connectDB();
 
 app.use(express.json());
-app.use(cors());
+// app.use(cors());
+app.use(cors({
+  origin: "*"
+}));
 
 // Routes
 app.post("/sign", Signcontroller);
