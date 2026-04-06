@@ -6,7 +6,7 @@ import { Logincontroller } from "./Controller/Logincontroller.js";
 import Notesrouter from "./Routes/Notesrouter.js"
 
 const app = express();
-const port = 3000;
+const port = process.env.PORT || 3000;
 const connectDB = async () => {
   try {
     await mongoose.connect(process.env.Mongodb_URL);
