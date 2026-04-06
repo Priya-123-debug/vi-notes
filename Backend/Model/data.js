@@ -5,18 +5,18 @@ const Noteschema = new mongoose.Schema(
       type: String,
       required: true,
     },
-    text: {
+    content: {          // ✅ FIXED
       type: String,
       required: true,
     },
-    ispinned: {
+    isPinned: {         // ✅ FIXED
       type: Boolean,
-      required: true,
+      default: false,
     },
   },
   {
     timestamps: true,
-  },
+  }
 );
 const Note= mongoose.model("Note", Noteschema);
 export default Note;
