@@ -28,6 +28,12 @@ app.use(cors({
 app.post("/sign", Signcontroller);
 app.post("/login", Logincontroller);
 app.use("/notes",Notesrouter);
+app.get("/", (req, res) => {
+  res.send("Server is working");
+});
+app.get("/notes/test", (req, res) => {
+  res.json({ message: "Notes route working" });
+});
 
 // Start server
 app.listen(port, () => {
